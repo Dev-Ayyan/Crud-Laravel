@@ -3,7 +3,7 @@ require_once 'web_builder.php';
 
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
-use App\Http\Controllers\DeveloperController;
+use App\Http\Controllers\Admin\DeveloperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -268,17 +268,9 @@ Route::get('/offline', function () {
 // FrontEndController
 Route::get('/', 'HomeController@home')->name('get-home');
 
+Route::get('/edit/{id}', 'Admin\DeveloperController@edit')->name('get-edit');
 
-Route::post('/create', 'HomeController@saveDeveloperInfo')->name('get-info-form')->middleware(ProtectAgainstSpam::class);
-
-
-Route::get('/edit/{id}', 'Admin\DeveloperController@editDeveloperInfo')->name('edit-developer');
-
-Route::post('/update/developer/{id}', 'HomeController@updateDeveloperInfo')->name('developer-update');
-
-Route::delete('/{id}', 'HomeController@deleteDeveloper')->name('developer.delete');
-
-Route::view('/create', 'create')->name('get-create');
+Route::resource('developer', Admin\DeveloperController::class);
 
 Route::get('/sitemap', 'HomeController@sitemap')->name('get-sitemap');
 

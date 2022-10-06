@@ -110,3 +110,18 @@ Route::get('developers/{developers}', ['as'=> 'developers.show', 'uses' => 'Deve
 Route::get('developers/{developers}/edit', ['as'=> 'developers.edit', 'uses' => 'DeveloperController@edit']);
 
 });
+
+
+Route::group(array('prefix' => 'admin/','namespace' => 'Admin','middleware' => 'admin','as'=>'admin.'), function () {
+
+Route::get('languages', ['as'=> 'languages.index', 'uses' => 'LanguageController@index']);
+Route::post('languages', ['as'=> 'languages.store', 'uses' => 'LanguageController@store']);
+Route::get('languages/create', ['as'=> 'languages.create', 'uses' => 'LanguageController@create']);
+Route::put('languages/{languages}', ['as'=> 'languages.update', 'uses' => 'LanguageController@update']);
+Route::patch('languages/{languages}', ['as'=> 'languages.update', 'uses' => 'LanguageController@update']);
+Route::get('languages/{id}/delete', array('as' => 'languages.delete', 'uses' => 'LanguageController@getDelete'));
+Route::get('languages/{id}/confirm-delete', array('as' => 'languages.confirm-delete', 'uses' => 'LanguageController@getModalDelete'));
+Route::get('languages/{languages}', ['as'=> 'languages.show', 'uses' => 'LanguageController@show']);
+Route::get('languages/{languages}/edit', ['as'=> 'languages.edit', 'uses' => 'LanguageController@edit']);
+
+});

@@ -21,19 +21,21 @@
 
             <div class="col-lg-10 offset-lg-1">
 
-                <h2>Edit</h2>
-                <a href="{{route('get-home')}}" class="btn btn-success">Back</a>
-                <form action="" method="POST">
+                <h2>Edit {{$developer->name }} | {{$developer->job}}</h2>
+                <a href="{{route('get-home')}}" class="btn btn-dark">Back</a>
+
+
+                <form action="{{route('developer.update', $developer->id)}}" method="POST">
                     @csrf
-                    <table>
-                        <tr>
-                            <td></td>
-                            <td><input type="text" name="name" value=""></td>
-                        </tr>
-                        <tr>
-                            <td><input type="submit" name="submit">Submit</td>
-                        </tr>
-                    </table>
+                    @method('PUT')
+                    <input value="{{$developer->name}}" type="text" class="form-control my-2 " name="name" id="name" placeholder="name">
+
+                    <input value="{{$developer->email}}" type="email" class="form-control my-2 " name="email" id="email" placeholder="email">
+
+                    <input value="{{$developer->age}}" type="text" class="form-control my-2 " name="age" id="age" placeholder="age">
+
+                    <input value="{{$developer->job}}" type="text" class="form-control my-2 " name="job" id="job" placeholder="job">
+                    <button type="submit" class="btn btn-success">Update</button>
                 </form>
             </div>
         </div>

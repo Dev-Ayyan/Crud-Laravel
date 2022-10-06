@@ -64,7 +64,7 @@ class DeveloperController extends InfyOmBaseController
 
         Flash::success('Developer saved successfully.');
 
-        return redirect(route('admin.developers.index'));
+        return redirect(route('get-home'))->with('success', Lang::get('message.success.create'));
     }
 
     /**
@@ -84,7 +84,7 @@ class DeveloperController extends InfyOmBaseController
             return redirect(route('developers.index'));
         }
 
-        return view('admin.developers.show')->with('developer', $developer);
+        return view('home')->with('developer', $developer);
     }
 
     /**
@@ -101,10 +101,10 @@ class DeveloperController extends InfyOmBaseController
         if (empty($developer)) {
             Flash::error('Developer not found');
 
-            return redirect(route('developers.index'));
+            return redirect(route('get-home'));
         }
 
-        return view('admin.developers.edit')->with('developer', $developer);
+        return view('edit', compact('developer'));
     }
 
     /**
@@ -115,23 +115,17 @@ class DeveloperController extends InfyOmBaseController
      *
      * @return Response
      */
+
     public function update($id, UpdateDeveloperRequest $request)
     {
         $developer = $this->developerRepository->findWithoutFail($id);
-
-
-
         if (empty($developer)) {
             Flash::error('Developer not found');
-
-            return redirect(route('developers.index'));
+            return redirect(route('get-home'));
         }
-
         $developer = $this->developerRepository->update($request->all(), $id);
-
         Flash::success('Developer updated successfully.');
-
-        return redirect(route('admin.developers.index'));
+        return redirect(route('get-home'))->with('success', Lang::get('message.success.update'));
     }
 
     /**
@@ -149,12 +143,12 @@ class DeveloperController extends InfyOmBaseController
         return View('admin.layouts/modal_confirmation', compact('error', 'model', 'confirm_route'));
     }
 
-    public function getDelete($id = null)
+    public function destroy($id = null)
     {
         $sample = Developer::destroy($id);
 
         // Redirect to the group management page
-        return redirect(route('admin.developers.index'))->with('success', Lang::get('message.success.delete'));
+        return redirect(route('get-home'))->with('success', Lang::get('message.success.delete'));
     }
 
     public function editDeveloperInfo($id)

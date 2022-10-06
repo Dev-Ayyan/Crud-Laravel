@@ -18,10 +18,8 @@
     <!-- end of global css -->
     <link href="{{ asset('vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('vendors/iCheck/css/all.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('vendors/colorpicker/css/bootstrap-colorpicker.min.css') }}" rel="stylesheet"
-        type="text/css" />
-    <link href="{{ asset('vendors/bootstrap3-wysihtml5-bower/css/bootstrap3-wysihtml5.min.css') }}" rel="stylesheet"
-        media="screen" />
+    <link href="{{ asset('vendors/colorpicker/css/bootstrap-colorpicker.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendors/bootstrap3-wysihtml5-bower/css/bootstrap3-wysihtml5.min.css') }}" rel="stylesheet" media="screen" />
     <link href="{{ asset('admin-assets/css/pages/editor.css') }}" rel="stylesheet" type="text/css" />
     <style>
         .colorpicker-right:after {
@@ -94,7 +92,8 @@
             max-height: 50px;
             background: white;
         }
-        .btn.btn-sm{
+
+        .btn.btn-sm {
             font-size: 12px !important;
         }
     </style>
@@ -103,10 +102,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Select 2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    
-     <!-- Font Awesome -->
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <!--page level css-->
     @yield('header_styles')
     <!--end of page level css-->
@@ -129,20 +128,16 @@
                     <li class=" nav-item dropdown user user-menu">
                         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                             @if(Sentinel::getUser()->pic)
-                            <img src="{{ Sentinel::getUser()->pic }}" alt="img" height="35px" width="35px"
-                                class="rounded-circle img-fluid float-left" />
+                            <img src="{{ Sentinel::getUser()->pic }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
 
                             @elseif(Sentinel::getUser()->gender === "male")
-                            <img src="{{ asset('admin-assets/images/authors/avatar3.png') }}" alt="img" height="35px" width="35px"
-                                class="rounded-circle img-fluid float-left" />
+                            <img src="{{ asset('admin-assets/images/authors/avatar3.png') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
 
                             @elseif(Sentinel::getUser()->gender === "female")
-                            <img src="{{ asset('admin-assets/images/authors/avatar5.png') }}" alt="img" height="35px" width="35px"
-                                class="rounded-circle img-fluid float-left" />
+                            <img src="{{ asset('admin-assets/images/authors/avatar5.png') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
 
                             @else
-                            <img src="{{ asset('admin-assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px"
-                                class="rounded-circle img-fluid float-left" />
+                            <img src="{{ asset('admin-assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
                             @endif
                             <div class="riot">
                                 <div>
@@ -158,19 +153,15 @@
                             <!-- User image -->
                             <li class="user-header bg-light-blue">
                                 @if(Sentinel::getUser()->pic)
-                                <img src="{{  Sentinel::getUser()->pic }}" alt="img" height="35px" width="35px"
-                                    class="rounded-circle img-fluid float-left" />
+                                <img src="{{  Sentinel::getUser()->pic }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
 
                                 @elseif(Sentinel::getUser()->gender === "male")
-                                <img src="{{ asset('admin-assets/images/authors/avatar3.png') }}" alt="img" height="35px"
-                                    width="35px" class="rounded-circle img-fluid float-left" />
+                                <img src="{{ asset('admin-assets/images/authors/avatar3.png') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
 
                                 @elseif(Sentinel::getUser()->gender === "female")
-                                <img src="{{ asset('admin-assets/images/authors/avatar5.png') }}" alt="img" height="35px"
-                                    width="35px" class="rounded-circle img-fluid float-left" />
+                                <img src="{{ asset('admin-assets/images/authors/avatar5.png') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
                                 @else
-                                <img src="{{ asset('admin-assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px"
-                                    width="35px" class="rounded-circle img-fluid float-left" />
+                                <img src="{{ asset('admin-assets/images/authors/no_avatar.jpg') }}" alt="img" height="35px" width="35px" class="rounded-circle img-fluid float-left" />
                                 @endif
                                 <p class="topprofiletext">{{ Sentinel::getUser()->first_name }} {{
                                     Sentinel::getUser()->last_name }}</p>
@@ -240,8 +231,7 @@
         </aside>
         <!-- right-side -->
     </div>
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top"
-        data-toggle="tooltip" data-placement="left">
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
         <i class="livicon" data-name="plane-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
     </a>
     <!-- global js -->
@@ -260,15 +250,15 @@
     <script src="{{ asset('admin-assets/js/pages/editor.js') }}" type="text/javascript"></script>
 
 
-<!-- input mask -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js" integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    $(".sort-code").inputmask("99-99-99");
-    $(".national-insurance-number").inputmask("AA 99 99 99 A");
-</script>
+    <!-- input mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js" integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".sort-code").inputmask("99-99-99");
+        $(".national-insurance-number").inputmask("AA 99 99 99 A");
+    </script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("form").submit(function () {
+        $(document).ready(function() {
+            $("form").submit(function() {
                 $('input[type=submit]').attr('disabled', 'disabled');
                 return true;
             });
@@ -321,7 +311,6 @@
                 ]
             });
         });
-
     </script>
 
     <!-- Sweet alert -->
@@ -331,7 +320,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         $(".flat-picker").flatpickr({
-            
+
         });
     </script>
     <!-- Select 2 -->
@@ -339,18 +328,18 @@
     <script>
         $(document).ready(function() {
             $('.select-2').select2({
-                
+
             });
         });
     </script>
 
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
 
     <!-- Bootstrap custom file input -->
     <script>
-        $('.custom-file-input').on('change',function(){
+        $('.custom-file-input').on('change', function() {
             //get the file name
             var fileName = $(this).val();
             //replace the "Choose a file" label

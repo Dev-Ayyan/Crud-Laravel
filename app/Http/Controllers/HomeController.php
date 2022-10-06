@@ -36,44 +36,9 @@ class HomeController extends JoshController
     }
 
 
-    public function saveDeveloperInfo(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'age' => 'required',
-            'job' => 'required'
-        ]);
-
-        Developer::create($request->all());
-
-
-        return redirect()
-            ->route('get-home');
-    }
 
 
 
-
-    public function updateDeveloperInfo(Request $request, $id)
-    {
-
-        $data = $request->except('_method', '_token', 'submit');
-
-        $developer = Developer::find($id);
-        $developer->update($data);
-
-        return view('home');
-    }
-
-    public function deleteDeveloper($id)
-    {
-        $developer =   Developer::find($id);
-        $developer->delete();
-
-        return redirect()
-            ->route('get-home');
-    }
 
 
 
