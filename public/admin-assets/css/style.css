@@ -1,0 +1,60 @@
+.form-image-size {
+    width: 250px;
+    height: 150px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.header a.logo img {
+    width: 74%;
+    margin-top: 4px;
+}
+
+.skin-josh .left-side {
+    padding-top: 46px;
+}
+
+.arabic_input {
+    width: 100%;
+    text-align: right;
+
+}
+
+.analytic .col-md-6 {
+    float: left;
+}
+
+.user_details tr td:last-child a:first-child {
+    display: none;
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #a94442;
+}
+
+.fa_action_btn a:hover .fa {
+    opacity: 0.6;
+}
+
+.fa_action_btn a {
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.fa_action_btn .fa-info-circle {
+    color: #418bca;
+}
+
+.fa_action_btn .fa-pencil-square-o {
+    color: #418bca;
+}
+
+.fa_action_btn .fa-trash {
+    color: red;
+}

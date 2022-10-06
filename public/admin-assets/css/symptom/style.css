@@ -1,0 +1,109 @@
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  letter-spacing: normal;
+  margin: 0;
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box; }
+
+
+.content_delivery_client_main{
+  border: 1px solid #7e7979;
+  padding: 10px;
+  background-color: #F0F0F0;
+}
+
+.headertop{
+  background: #F0F0F0;
+}
+.header_selection label{
+font-size: 13px;
+line-height: 1;
+padding-top: 4px;
+}
+.header_selection select{
+  font-size: 13px;
+  border-radius: 0;
+  height: 22px;
+    padding: 0;
+    background: #E1E1E1;
+    border-color: #ccbfbf;
+}
+.header_selection select:focus{
+  background: #E1E1E1;
+  border-color: #ccbfbf;
+  box-shadow: none;
+}
+.header_selection input{
+  font-size: 13px;
+  border-radius: 0;
+  height: 25px;
+  padding: 4px;
+    background: #fff;
+    border-color: #ccbfbf;
+}
+.header_selection input:focus{
+  background: #fff;
+  border-color: #ccbfbf;
+  box-shadow: none;
+}
+.header_selection .form-group {
+
+  margin-bottom: 4px;
+}
+.delivery_btn{
+  background: #01BC8C;
+  font-size: 13px;
+  min-width: 109px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccbfbf;
+  min-height: 26px;
+  color: #fff;
+}
+.delivery_btn:hover{
+  background-color: #218838;
+  color: #fff;
+}
+a{
+  color: #000000;
+}
+a:hover{
+  text-decoration: none;
+  color: #000000;
+}
+.get_all_side{
+  height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #000;
+}
+.table_list {
+  margin-top: 10px;
+  border: 1px solid #000;
+  height: 450px;
+  overflow: auto;
+}
+.table_list .table{
+  background-color: #fff;
+  margin-bottom: 0;
+}
+.table_list .table-bordered td, .table_list .table-bordered th{
+  border-color: #ccbfbf;
+  font-size: 13px;
+}
+.table_list .table-bordered thead td, .table_list .table-bordered thead th {
+  border-bottom-width: 1px;
+  
+}
+.table_list .table-bordered thead th {
+  font-weight: 500;
+}

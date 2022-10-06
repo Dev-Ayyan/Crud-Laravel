@@ -1,0 +1,6 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group">
+    {!! Form::label('$FIELD_NAME$', '$FIELD_NAME_TITLE$:') !!}
+    <p>@if( $$MODEL_NAME_CAMEL$->$FIELD_NAME$  =='1') <span class="badge badge-sm badge-success"> Yes </span> @else <span class="badge badge-sm badge-danger"> No </span> @endif</p>
+    <hr>
+</div>
