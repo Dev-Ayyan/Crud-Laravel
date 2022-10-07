@@ -8,6 +8,7 @@
 <meta itemprop="image" content="">
 <meta property="og:image" content="" />
 <meta name="twitter:image" content="" />
+
 @append
 
 @section('bodyClass',"")
@@ -50,7 +51,7 @@
                         <th>Customize</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="developer_tb">
                     @foreach ($developers as $developer)
 
                     <tr>
