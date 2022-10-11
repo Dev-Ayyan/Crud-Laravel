@@ -10,7 +10,12 @@ class Developer extends Model
 {
 
     public $table = 'developers';
-    
+
+
+    public function language()
+    {
+        return $this->hasOne(Language::class);
+    }
 
 
     public $fillable = [
@@ -43,7 +48,5 @@ class Developer extends Model
      *
      * @var array
      */
-    public static $rules = [
-        
-    ];
+    public static $rules = [];
 }

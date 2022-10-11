@@ -26,7 +26,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('archived', 'Archived:') !!}
     <label class="checkbox-inline">
-        {!! Form::checkbox('archived', '1') !!} 
+        {!! Form::checkbox('archived', '1') !!}
     </label>
 </div>
 
@@ -34,7 +34,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('is_featured', 'Is Featured:') !!}
     <label class="checkbox-inline">
-        {!! Form::checkbox('is_featured', '1') !!} 
+        {!! Form::checkbox('is_featured', '1') !!}
     </label>
 </div>
 

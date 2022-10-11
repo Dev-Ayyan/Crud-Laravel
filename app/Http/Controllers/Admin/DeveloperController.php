@@ -77,13 +77,10 @@ class DeveloperController extends InfyOmBaseController
     public function show($id)
     {
         $developer = $this->developerRepository->findWithoutFail($id);
-
         if (empty($developer)) {
             Flash::error('Developer not found');
-
             return redirect(route('developers.index'));
         }
-
         return view('home')->with('developer', $developer);
     }
 
@@ -94,7 +91,23 @@ class DeveloperController extends InfyOmBaseController
      *
      * @return Response
      */
+
     public function edit($id)
+    {
+        $developer = $this->developerRepository->findWithoutFail($id);
+
+        if (empty($developer)) {
+            Flash::error('Developer not found');
+
+            return redirect(route('developers.index'));
+        }
+
+        return view('admin.developers.edit')->with('developer', $developer);
+    }
+
+
+
+    public function editDeveloper($id)
     {
         $developer = $this->developerRepository->findWithoutFail($id);
 
@@ -151,9 +164,11 @@ class DeveloperController extends InfyOmBaseController
         return redirect(route('get-home'))->with('success', Lang::get('message.success.delete'));
     }
 
-    public function editDeveloperInfo($id)
+    public function getDelete($id = null)
     {
-        $developer = Developer::find($id);
-        return view('edit');
+        $sample = Developer::destroy($id);
+
+        // Redirect to the group management page
+        return redirect(route('admin.developers.index'))->with('success', Lang::get('message.success.delete'));
     }
 }

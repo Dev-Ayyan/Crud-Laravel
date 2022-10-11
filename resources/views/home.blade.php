@@ -47,13 +47,13 @@
                         <th>Email</th>
                         <th>Age</th>
                         <th>Job</th>
+                        <th>Language</th>
                         <th>Image</th>
                         <th>Customize</th>
                     </tr>
                 </thead>
                 <tbody id="developer_tb">
                     @foreach ($developers as $developer)
-
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$developer->name}}</td>
@@ -63,16 +63,11 @@
                         <td>{{$developer->image}}</td>
                         <td>
                             <a href="{{route('get-edit', $developer->id)}}" class="btn btn-warning d-inline m-1">Edit</a>
-
                             <form action="{{route('developer.destroy', $developer->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger d-inline m-1">Delete</button>
                             </form>
-
-
-
-
                         </td>
                     </tr>
                     @endforeach

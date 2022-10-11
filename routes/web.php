@@ -268,7 +268,7 @@ Route::get('/offline', function () {
 // FrontEndController
 Route::get('/', 'HomeController@home')->name('get-home');
 
-Route::get('/edit/{id}', 'Admin\DeveloperController@edit')->name('get-edit');
+Route::get('/edit/{id}', 'Admin\DeveloperController@editDeveloper')->name('get-edit');
 
 Route::resource('developer', Admin\DeveloperController::class);
 

@@ -36,12 +36,6 @@ class HomeController extends JoshController
     }
 
 
-
-
-
-
-
-
     public function getContact()
     {
         $page = Page::where('type', 'contact')->with('banner')->firstOrFail();
